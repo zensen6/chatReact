@@ -1,0 +1,10 @@
+.Message{
+    width: 500px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
