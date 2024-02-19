@@ -73,7 +73,7 @@ function CreateRoom() {
         let response = null;
         try {
         // axios 요청 설정
-            response = await axios.post(`http://${url}/chat/room`,instructor.instructorId,{
+            response = await axios.post(`http://${url}/student/enter`,instructor.instructorId,{
                 headers: {
                     'Authorization': `Bearer ${token}`, // 헤더에 JWT 토큰 추가
                     'Content-Type': 'application/json' // 요청의 Content-Type 설정
@@ -135,7 +135,7 @@ function CreateRoom() {
               
             const token = sessionStorage.getItem('token');
             setLoading(true);
-            const response = await axios.get('http://43.200.254.172:8080/instructors', {
+            const response = await axios.get(`http://${url}/instructors`, {
                 params: params,
                 headers: {
                     'Authorization': `Bearer ${token}`, // Add JWT token to the headers
